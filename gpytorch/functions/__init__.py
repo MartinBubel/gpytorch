@@ -6,6 +6,7 @@ from ._dsmm import DSMM
 from ._log_normal_cdf import LogNormalCDF
 from .matern_covariance import MaternCovariance
 from .rbf_covariance import RBFCovariance
+from .laplacian_covariance import LaplacianCovariance
 
 
 def add_diag(input, diag):
@@ -192,6 +193,7 @@ def root_inv_decomposition(mat, initial_vectors=None, test_vectors=None):
 __all__ = [
     "MaternCovariance",
     "RBFCovariance",
+    "LaplacianCovariance",
     "add_diag",
     "dsmm",
     "inv_matmul",
