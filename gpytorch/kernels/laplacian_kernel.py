@@ -17,7 +17,7 @@ class LaplacianKernel(Kernel):
     .. math::
 
        \begin{equation*}
-          k_{\text{Laplacian}}(\mathbf{x_1}, \mathbf{x_2}) = \exp \left( -\frac{ ||x_1 - x_2|| }{ \Theta } \right)
+          k_{\text{Laplacian}}(\mathbf{x_1}, \mathbf{x_2}) = \exp \left( - \left(\mathbf{x_1} - \mathbf{x_2}\right)^\top \Theta^{-1} \left(\mathbf{x_1} - \mathbf{x_2}\right) \right)
        \end{equation*}
 
     where :math:`\Theta` is a :attr:`lengthscale` parameter.
